@@ -6,7 +6,7 @@
 import { Button, Card, CardContent, TextField } from "@mui/material";
 import { useState } from "react";
 
-const ContactForm = ( handleSubmit ) => {
+const ContactForm = ( props ) => {
   // Form berisi name, phone, email, dan photo url
   // Buatlah state newContact berupa objek sesuai dengan data yang ada
   const [name, setName] = useState("Anies");
@@ -16,9 +16,9 @@ const ContactForm = ( handleSubmit ) => {
 
   const _onChange = (e) => {
     e.preventDefault();
-    let data = { name, email, phone, photo };
+    let newContact = { name, email, phone, photo };
 
-    handleSubmit(data);
+    props.handleSubmit(newContact);
   }
 
   return (
