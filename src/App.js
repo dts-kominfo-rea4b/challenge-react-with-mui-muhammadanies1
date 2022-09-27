@@ -1,7 +1,7 @@
-import './App.css';
-
-// Uncomment untuk memuat daftar kontak
+// import './App.css';
 // import contactsJSON from './data/contacts.json';
+import Header from "./components/Header";
+
 const App = () => {
   // Masukkan Header dan lakukan map untuk Contact ke dalam div App
   // untuk membuat daftar kontak bisa menggunakan MUI list
@@ -12,6 +12,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Header />
     </div>
   );
 };
